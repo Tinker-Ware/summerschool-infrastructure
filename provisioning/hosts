@@ -1,5 +1,4 @@
 tinkerware.react ansible_connection=local
-myserver ansible_connection=local
 
 [tinkerware]
 tinkerware.react

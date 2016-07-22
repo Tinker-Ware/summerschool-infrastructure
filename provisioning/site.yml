@@ -1,4 +1,4 @@
 ---
 - hosts: tinkerware.react
-  roles: 
+  roles:
     - react_page
