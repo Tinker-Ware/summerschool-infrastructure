@@ -14,6 +14,8 @@ def standard_machine(config, hostname, ip)
     config.vm.hostname = hostname
     config.ssh.insert_key = false
 
+    config.vm.synced_folder "opt/", "/opt/tinker", create: true
+
     config.vm.provider "virtualbox" do |vb|
       vb.customize ['modifyvm', :id, '--nictype1', 'virtio']
       vb.customize ['modifyvm', :id, '--nictype2', 'virtio']
