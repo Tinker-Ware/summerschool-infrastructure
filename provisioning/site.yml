@@ -1,0 +1,3 @@
+---
+- hosts: tinkerware.react
+  roles: []
