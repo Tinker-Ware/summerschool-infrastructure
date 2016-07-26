@@ -59,7 +59,15 @@ BEFORE DOING ANYTHING
 The mentors will provide the IP addresses every team should use. Wait until you have them.
 
 Go to the folder `deploy-exercise` and edit the file `Vagrantfile`.
-Replace the current IPs of each machine to match the provided IPs.
+Replace the current IPs of each machine to match the provided IPs and HOSTNAMES.
+
+**My role:** | HOSTNAME in Vagrantifle
+-------------|----------
+If you're in charge of the react page(frontend) | `summerschool.react`
+If you're in charge of the users microservice | `summerschool.users`
+If you're in charge of the items microservice | `summerschool.items`
+If you're in charge of the cart microservice | `summerschool.cart`
+
 
 ```
 standard_machine config, 'tinkerware.react', '192.168.33.100' # Replace the IP address.
