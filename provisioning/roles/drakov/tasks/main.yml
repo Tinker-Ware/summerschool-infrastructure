@@ -1,0 +1,76 @@
+---
+- name: Ensure git is installed
+  apt: name=git state=present
+  sudo: true
+
+- name: Create group
+  group:
+    name: "{{ server_group }}"
+    system: yes
+    state: present
+  sudo: yes
+
+- name: Create user
+  user:
+    name: "{{ server_user }}"
+    group: "{{ server_group }}"
+    home: "/home/{{ server_user }}"
+    createhome: yes
+    shell: /bin/bash
+    system: yes
+    state: present
+  sudo: yes
+
+- name: Folder in opt for repos
+  sudo: true
+  file:
+    path={{ repo_path }}
+    owner={{ server_user }}
+    group={{ server_group }}
+    mode=0755
+    state=directory
+
+# Install React stuff from here. The previous stuff should be
+# handled different.
+
+- name: download React test page
+  get_url:
+    url={{ starter_kit }}
+    dest={{ repo_path }}
+
+- name: install zip
+  apt:
+    name=unzip
+    state=present
+  sudo: yes
+
+- name: Unarchive react starterkit
+  unarchive:
+    src={{ repo_path }}/{{ starter_kit | basename }}
+    dest={{ repo_path }}
+
+- name: Clone server for react
+  git:
+    repo={{ github_repo }}
+    dest={{ repo_path }}/react-tutorial
+
+- name: Install node dependencies
+  shell: "npm install"
+  args:
+    chdir: "{{ repo_path }}/react-tutorial"
+  #command: nohup gh-service 0<&- &> /tmp/ghservice.log &
+
+- name: Start daemon
+  shell: nohup npm run mock-server 0<&- &> /tmp/drakov.log &
+  #shell: npm run build & #node server.js &
+ # sudo: yes
+  args:
+    chdir: "{{ repo_path }}/react-tutorial"  #command: nohup gh-service 0<&- &> /tmp/ghservice.log &
+    executable: /bin/bash
+  #shell: "start-stop-daemon --start --quiet --pidfile /var/run/react_tutorial.pid --exec /usr/bin/node server.js &"
+# - name: Clone git repo
+#   git:
+#     repo="{{ github_repo }}"
+#     dest={{ repo_path }}
+#   sudo: yes
+#   sudo_user: "{{ server_user }}"
