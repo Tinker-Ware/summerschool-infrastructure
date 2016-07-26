@@ -173,15 +173,6 @@ And you should have a running instance of node!
 Isn't it great to be a sysadmin? ... Now we need to fight with the developers
 to run the code. haha....
 
-... Next tutorial
-
-First of all we need to fetch it from the repository on github.
-But we can't clone it just anywhere.
-The correct Path for this kind of projects would be `/opt`
-
-![](https://a.fsdn.com/allura/p/cmdrevd/icon)Lets create a folder there called `tinkerware_react` and
-place the react project inside that path.
-
 
 
 SUMMARY
