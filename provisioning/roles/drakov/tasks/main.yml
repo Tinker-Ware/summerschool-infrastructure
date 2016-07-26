@@ -1,0 +1,82 @@
+---
+- name: Ensure git is installed
+  apt: name=git state=present
+  sudo: true
+
+# CREATE USER AND GROUP HERE
+############################
+# http://docs.ansible.com/ansible/user_module.html
+# http://docs.ansible.com/ansible/group_module.html
+
+
+
+
+
+
+
+
+
+
+- name: Folder in opt for repos
+  sudo: true
+  file:
+    path={{ repo_path }}
+    owner={{ server_user }}
+    group={{ server_group }}
+    mode=0755
+    state=directory
+
+- name: download React test page
+  get_url:
+    url={{ starter_kit }}
+    dest={{ repo_path }}
+
+
+# INSTALL DEPENDENCIES. (Install zip)
+#####################################
+# http://docs.ansible.com/ansible/apt_module.html
+
+
+
+
+
+
+
+
+
+
+
+- name: Unarchive react starterkit
+  unarchive:
+    src={{ repo_path }}/{{ starter_kit | basename }}
+    dest={{ repo_path }}
+
+
+# CLONE REPOSITORY THAT CONTAINS YOUR MICRO SERVICE
+########################################
+# http://docs.ansible.com/ansible/git_module.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- name: Install node dependencies
+  shell: "npm install"
+  args:
+    chdir: "{{ repo_path }}/react-tutorial"
+
+- name: Start daemon
+  shell: nohup npm run mock-server 0<&- &> /tmp/drakov.log &
+  args:
+    chdir: "{{ repo_path }}/react-tutorial"
+    executable: /bin/bash
