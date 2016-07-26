@@ -1,0 +1,9 @@
+---
+nodejs_version: 'nodejs-v4x'
+npm_version: '2.14.7'
+server_group: vagrant
+server_user: vagrant
+repo_path: "/opt/tinker/shared_files/tinkerware_react"
+github_repo: "https://github.com/Tinker-Ware/summerschool-users-api.git"
+nodejs_npm_packages:
+  - react
