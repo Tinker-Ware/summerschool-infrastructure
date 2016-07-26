@@ -2,3 +2,6 @@
 - hosts: tinkerware.react
   roles:
     - react_page
+- hosts: tinkerware.mock
+  roles:
+    - react_page_drakov

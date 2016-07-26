@@ -3,6 +3,7 @@
 
 Vagrant.configure(2) do |config|
   standard_machine config, 'tinkerware.react', '192.168.33.100'
+  standard_machine config, 'tinkerware.mock', '192.168.33.200'
 end
 
 def standard_machine(config, hostname, ip)

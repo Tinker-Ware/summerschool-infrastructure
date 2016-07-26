@@ -1,4 +1,5 @@
 tinkerware.react ansible_connection=local
+tinkerware.mock ansible_connection=local
 
 [tinkerware]
 tinkerware.react
