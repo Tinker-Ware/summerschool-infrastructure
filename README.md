@@ -53,6 +53,18 @@ If you don't know what is git. Download the following file in your `deploy-exerc
 
 **Start using your Command line terminal from here.**
 
+BEFORE DOING ANYTHING
+---
+
+The mentors will provide the IP addresses every team should use. Wait until you have them.
+
+Go to the folder `deploy-exercise` and edit the file `Vagrantfile`.
+Replace the current IPs of each machine to match the provided IPs.
+
+```
+standard_machine config, 'tinkerware.react', '192.168.33.100' # Replace the IP address.
+```
+
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon) Go to the folder `deploy-exercise` and run `vagrant up` to start your machine.
 
 Once it's done, run:
@@ -131,20 +143,30 @@ from source), you will need to install the `build-essentials` package
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Add repository and install its signing key
 curl -sL https://deb.nodesource.com/setup_4.x | bash -
 
-![](https://a.fsdn.com/allura/p/cmdrevd/icon)Now, we have a serer ready to host a React project.
+Now, we have a serer ready to host a React project.
 Let's get that project to run.
 
-![](https://a.fsdn.com/allura/p/cmdrevd/icon)Now that it's there, we need to run the service to listen to requests
-and show our project to the world. The necessary scripts can be found in
-https://github.com/reactjs/react-tutorial.git
+Now that it's there, we need to run the service to listen to requests
+and show our project to the world.
+
+![](https://a.fsdn.com/allura/p/cmdrevd/icon)Clone the repo you're supposed to run.
+
+For the React page: https://github.com/Tinker-Ware/summerschool-frontend.git
+For the User microservice https://github.com/Tinker-Ware/summerschool-users-api.git
+For the Cart microservice https://github.com/Tinker-Ware/summerschool-cart-api.git
+For the Items microservice https://github.com/Tinker-Ware/summerschool-items-api.git
+
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Now that we have all those files, in the README file are the steps
-necessary to run the service. You can run it with node, since we prepared
+necessary to run the service. You can run it with `npm`, since we prepared
 the server for that.
 
 Great!
 
-Visit http://localhost:3000
+Visit http://192.168.33.100:3000 (Make sure you use the appropriate IP)
+
+Review that you can see the Items, a user, and you can use the cart.
+That would mean that everyone in the team did great!
 
 And you should have a running instance of node!
 
