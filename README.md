@@ -22,7 +22,7 @@ Run your machine depending on the hostname of it.
 
 Remember.
 
-**My role:** | Variable name
+**My role:** | HOSTNAME in Vagrantfile
 -------------|----------
 If you're in charge of the react page(frontend) | `summerschool.react`
 If you're in charge of the users microservice | `summerschool.users`

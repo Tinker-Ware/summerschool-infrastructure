@@ -2,13 +2,18 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  standard_machine config, 'summerschool.mymachine', '192.168.33.100' # MODIFY HOSTNAME and IP
+
+
+  ### MODIFY HOSTNAME and IP  !!
+  ########
+  standard_machine config, 'summerschool.mymachine', '192.168.33.100'
+  ########
+  ########
 end
 
 def standard_machine(config, hostname, ip)
   config.vm.define hostname do |config|
 
-    ### MACHINE CONFIGURATION
     config.vm.box = "debian/contrib-jessie64"
     config.vm.network :private_network, ip: ip
     config.vm.hostname = hostname
@@ -23,7 +28,6 @@ def standard_machine(config, hostname, ip)
       vb.cpus   = 2
     end
 
-    ### PROVISIONING
     config.vm.provision "ansible_local" do |ansible|
       ansible.install  = true
       ansible.playbook = "provisioning/site.yml"
