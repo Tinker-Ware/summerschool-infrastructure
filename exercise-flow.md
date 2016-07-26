@@ -8,6 +8,7 @@ Who's made a deploy?
 
 A normal deploy
 >> Deploy exercise starts. <<<<<<<<<
+>> Provide IPs
 >> Count time. Timing matters
 
 >> why timing matters.
