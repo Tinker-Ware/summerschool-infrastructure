@@ -1,7 +1,16 @@
 ---
-- hosts: tinkerware.react
+- hosts: summerschool.react
   roles:
     - react_page
-- hosts: tinkerware.mock
+
+- hosts: summerschool.users
+  roles:
+    - drakov
+
+- hosts: summerschool.items
+  roles:
+    - drakov
+
+- hosts: summerschool.cart
   roles:
     - drakov

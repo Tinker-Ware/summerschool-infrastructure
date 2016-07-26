@@ -2,8 +2,10 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  standard_machine config, 'tinkerware.react', '192.168.33.100'
-  standard_machine config, 'tinkerware.mock', '192.168.33.200'
+  standard_machine config, 'summerschool.react', '192.168.33.100'
+  standard_machine config, 'summerschool.users', '192.168.33.200'
+  standard_machine config, 'summerschool.items', '192.168.33.300'
+  standard_machine config, 'summerschool.cart', '192.168.33.400'
 end
 
 def standard_machine(config, hostname, ip)
