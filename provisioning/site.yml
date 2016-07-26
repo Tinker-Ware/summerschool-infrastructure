@@ -1,4 +1,4 @@
 ---
-- hosts: tinkerware.react
+- hosts: summerschool.exercise # REPLACE THIS HOSTNAME FOR YOUR MACHINES HOSTNAME
   roles:
     - # Add name of the role here
