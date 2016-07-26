@@ -151,10 +151,13 @@ and show our project to the world.
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Clone the repo you're supposed to run.
 
-For the React page: https://github.com/Tinker-Ware/summerschool-frontend.git
-For the User microservice https://github.com/Tinker-Ware/summerschool-users-api.git
-For the Cart microservice https://github.com/Tinker-Ware/summerschool-cart-api.git
-For the Items microservice https://github.com/Tinker-Ware/summerschool-items-api.git
+- For the React page: https://github.com/Tinker-Ware/summerschool-frontend.git
+
+- For the User microservice https://github.com/Tinker-Ware/summerschool-users-api.git
+
+- For the Cart microservice https://github.com/Tinker-Ware/summerschool-cart-api.git
+
+- For the Items microservice https://github.com/Tinker-Ware/summerschool-items-api.git
 
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Now that we have all those files, in the README file are the steps
