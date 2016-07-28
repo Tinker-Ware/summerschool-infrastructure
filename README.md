@@ -132,6 +132,9 @@ from source), you will need to install the `build-essential` package
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Add repository and install its signing key
 curl -sL https://deb.nodesource.com/setup_4.x | bash -
 
+Now we have the key to install nodejs. 
+Install the package `nodejs`.
+
 Now, we have a server ready to host a React project.
 Let's get that project to run.
 
