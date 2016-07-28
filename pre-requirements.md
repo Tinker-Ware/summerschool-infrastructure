@@ -52,6 +52,8 @@ summerschool.react           : ok=1    changed=0    unreachable=0    failed=0
 If you achieved this, you're ready for tomorrow!
 If not, try to fix any problem you may have or contact `hello@tinkerware.io`
 
+Run `vagrant halt`.
+
 Known issues
 ---
 
