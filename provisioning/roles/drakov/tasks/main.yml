@@ -61,7 +61,7 @@
   #command: nohup gh-service 0<&- &> /tmp/ghservice.log &
 
 - name: Start daemon
-  shell: nohup npm run mock-server 0<&- &> /tmp/drakov.log &
+  shell: nohup npm run api-server 0<&- &> /tmp/drakov.log &
   #shell: npm run build & #node server.js &
  # sudo: yes
   args:
