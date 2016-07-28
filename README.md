@@ -57,9 +57,10 @@ vagrant ssh
 Windows
 ---
 Run [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
-Hostname: The ip assigned to you
-Login user: vagrant
-login pass: vagrant
+
+  - Hostname: The ip assigned to you
+  - Login user: vagrant
+  - login pass: vagrant
 
 
 **Welcome to your new fresh server.**
