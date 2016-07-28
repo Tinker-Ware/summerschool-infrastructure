@@ -82,6 +82,8 @@ The first thing a server needs is a group of users. You don't want everyone
 going all over your servers, accessing everything, wrecking stuff and leaving
 your servers vulnerable!
 
+Run `sudo -i`
+
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon) So first thing: Create a new user. Of course a user must belong to a group.
 Go ahead and create a user called `intern1` that belongs to the group `sysadmin`
 
@@ -98,7 +100,6 @@ You can use any editor you want. If you don't know which one to use, just run:
 PermitRootLogin no
 PasswordAuthentication yes
 Protocol 2
-AllowUsers ${USER}
 ```
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Great. now create a secure password for new user and login to the new user
@@ -110,6 +111,8 @@ account.
 As a good practice, one should normally set up the firewall as well, and
 some other tasks in order to have a healthy and secure server, but we'll
 leave that for another ocasion. Let's move to a deploy.
+
+run `su - vagrant`
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Now we need to install dependencies that our project needs, and some others
 to download and manage files that are online.
@@ -129,7 +132,7 @@ from source), you will need to install the `build-essentials` package
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Add repository and install its signing key
 curl -sL https://deb.nodesource.com/setup_4.x | bash -
 
-Now, we have a serer ready to host a React project.
+Now, we have a server ready to host a React project.
 Let's get that project to run.
 
 Now that it's there, we need to run the service to listen to requests
