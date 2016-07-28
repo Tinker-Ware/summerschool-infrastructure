@@ -38,7 +38,7 @@ If you're in charge of the cart microservice | `summerschool.cart`
 
 
 ```
-standard_machine config, 'tinkerware.react', '192.168.33.100' # Replace the IP address.
+standard_machine config, summerschool.react', '192.168.33.100' # Replace the IP address.
 config.vm.network :public_network, ip: ip  ## CHANGE "private" for "public"
 ```
 
