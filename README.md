@@ -102,9 +102,6 @@ PasswordAuthentication yes
 Protocol 2
 ```
 
-![](https://a.fsdn.com/allura/p/cmdrevd/icon)Great. now create a secure password for new user and login to the new user
-account.
-
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Now that everything is set, we're ready to restart the ssh deamon.
 `sudo service ssh restart`
 
@@ -112,7 +109,10 @@ As a good practice, one should normally set up the firewall as well, and
 some other tasks in order to have a healthy and secure server, but we'll
 leave that for another ocasion. Let's move to a deploy.
 
-run `su - vagrant`
+![](https://a.fsdn.com/allura/p/cmdrevd/icon)Great. now create a secure password for new user and login to the new user
+account.
+
+run `su - intern1`
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Now we need to install dependencies that our project needs, and some others
 to download and manage files that are online.
@@ -143,7 +143,7 @@ and show our project to the world.
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon) (NO SUDO) Clone the repo you're supposed to run inside `/opt/summerschool/`
 
-Probably you wont have permissions in that folder. fix it with `sudo chown -R vagrant:vagrant /opt/summerschool`
+Probably you wont have permissions in that folder. fix it with `sudo chown -R intern1:intern1 /opt/summerschool`
 
 - For the React page: https://github.com/Tinker-Ware/summerschool-frontend.git
 
