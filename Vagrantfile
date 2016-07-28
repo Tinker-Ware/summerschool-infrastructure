@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  standard_machine config, 'tinkerware.react', '192.168.33.100'
+  standard_machine config, 'summerschool.react', '192.168.33.100'
 end
 
 def standard_machine(config, hostname, ip)
@@ -19,7 +19,7 @@ def standard_machine(config, hostname, ip)
       vb.customize ['modifyvm', :id, '--nictype2', 'virtio']
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
-      vb.memory = 2048
+      vb.memory = 1536
       vb.cpus   = 2
     end
 

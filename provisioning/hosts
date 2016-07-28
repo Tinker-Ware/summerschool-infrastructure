@@ -1,4 +1,4 @@
-tinkerware.react ansible_connection=local
+summerschool.react ansible_connection=local
 
-[tinkerware]
-tinkerware.react
+[summerschool]
+summerschool.react

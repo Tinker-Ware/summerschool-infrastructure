@@ -1,3 +1,3 @@
 ---
-- hosts: tinkerware.react
+- hosts: summerschool.react
   roles: []
