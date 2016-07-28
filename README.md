@@ -24,10 +24,9 @@ Good luck.
 BEFORE DOING ANYTHING
 ---
 
-The mentors will provide the IP addresses every team should use. Wait until you have them.
-
 Go to the folder `deploy-exercise/summerschool-infrastructure` and edit the file `Vagrantfile`.
-Replace the current IPs of each machine to match the provided IPs and HOSTNAMES.
+Find the line that contains `private_network` and change it for `public_network`. Delete the rest of the line (The `,ip: ip` stuff)
+Replace the current Hostname of each machine to match the provided HOSTNAMES.
 
 **My role:** | HOSTNAME in Vagrantifle
 -------------|----------
@@ -38,8 +37,8 @@ If you're in charge of the cart microservice | `summerschool.cart`
 
 
 ```
-standard_machine config, summerschool.react', '192.168.33.100' # Replace the IP address.
-config.vm.network :public_network, ip: ip  ## CHANGE "private" for "public"
+standard_machine config, summerschool.react', '192.168.33.100' # Replace the HOSTNAME.
+config.vm.network :public_network ## CHANGE "private" for "public"
 ```
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon) Go to the folder `deploy-exercise/summerschool-infrastructure` and run `vagrant up` to start your machine.
@@ -58,7 +57,7 @@ Windows
 ---
 Run [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
-  - Hostname: The IP of your vagrant machine
+  - Hostname: 127.0.0.1
   - Login user: vagrant
   - login pass: vagrant
 
