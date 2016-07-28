@@ -136,7 +136,7 @@ Let's get that project to run.
 Now that it's there, we need to run the service to listen to requests
 and show our project to the world.
 
-![](https://a.fsdn.com/allura/p/cmdrevd/icon)Clone the repo you're supposed to run.
+![](https://a.fsdn.com/allura/p/cmdrevd/icon)Clone the repo you're supposed to run inside `/opt/summerschool/`
 
 - For the React page: https://github.com/Tinker-Ware/summerschool-frontend.git
 
