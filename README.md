@@ -127,7 +127,7 @@ open source libraries in the world.
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)In the npm documentation we can find te requirements to its installation.
 In order for some npm packages to work (such as those that require building
-from source), you will need to install the `build-essentials` package
+from source), you will need to install the `build-essential` package
 
 ![](https://a.fsdn.com/allura/p/cmdrevd/icon)Add repository and install its signing key
 curl -sL https://deb.nodesource.com/setup_4.x | bash -
