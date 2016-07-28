@@ -160,10 +160,7 @@ the server for that.
 
 Great!
 
-Visit http://192.168.33.100:3000 (Make sure you use the appropriate IP)
-
-Review that you can see the Items, a user, and you can use the cart.
-That would mean that everyone in the team did great!
+You should see now a message telling you that everything is running fine! 
 
 And you should have a running instance of node!
 
