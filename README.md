@@ -19,38 +19,6 @@ Make sure you understand the task. That will make everything easier!
 Good luck.
 
 
-## VAGRANT CREATION
-
-### Requirements
-
-#### Virtualbox
-
-[For Windows](http://download.virtualbox.org/virtualbox/5.1.0/VirtualBox-5.1.0-108711-Win.exe)
-
-[For Linux](https://www.virtualbox.org/wiki/Linux_Downloads)
-
-[For Mac](http://download.virtualbox.org/virtualbox/5.1.0/VirtualBox-5.1.0-108711-OSX.dmg)
-
-#### Vagrant
-
-[For windows](https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4.msi)
-
-[For Debian 32 bits](https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_i686.deb)
-
-[For Debian 64 bits](https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_x86_64.deb)
-
-[For Mac](https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4.dmg)
-
-
-Create a Folder to keep the files of this exercise.
-Recommended: `~/Documents/tinkerware/deploy-exercise`
-
-If you have git installed on your computer. Go inside your `deploy-exercise` folder
-and clone the following repo: `https://github.com/Tinker-Ware/summerschool-infrastructure`
-
-If you don't know what is git. Download the following file in your `deploy-exercise` folder:
-`https://github.com/Tinker-Ware/summerschool-infrastructure/archive/master.zip`.
-
 **Start using your Command line terminal from here.**
 
 BEFORE DOING ANYTHING
@@ -58,7 +26,7 @@ BEFORE DOING ANYTHING
 
 The mentors will provide the IP addresses every team should use. Wait until you have them.
 
-Go to the folder `deploy-exercise` and edit the file `Vagrantfile`.
+Go to the folder `deploy-exercise/summerschool-infrastructure` and edit the file `Vagrantfile`.
 Replace the current IPs of each machine to match the provided IPs and HOSTNAMES.
 
 **My role:** | HOSTNAME in Vagrantifle
@@ -71,24 +39,34 @@ If you're in charge of the cart microservice | `summerschool.cart`
 
 ```
 standard_machine config, 'tinkerware.react', '192.168.33.100' # Replace the IP address.
+config.vm.network :public_network, ip: ip  ## CHANGE "private" for "public"
 ```
 
-![](https://a.fsdn.com/allura/p/cmdrevd/icon) Go to the folder `deploy-exercise` and run `vagrant up` to start your machine.
+![](https://a.fsdn.com/allura/p/cmdrevd/icon) Go to the folder `deploy-exercise/summerschool-infrastructure` and run `vagrant up` to start your machine.
 
 Once it's done, run:
+
+Linux
+---
+From the terminal run:
 
 ```
 vagrant ssh
 ```
 
-Welcome to your new fresh server.
+Windows
+---
+Run [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
+Hostname: The ip assigned to you
+Login user: vagrant
+login pass: vagrant
+
+
+**Welcome to your new fresh server.**
 
 If your want to know more details about Vagrant, you can visit
 the [get started page](https://www.vagrantup.com/docs/getting-started/)
 
-<!-- This will create a `Vagrantfile` wich contains the configurations for your local machine. -->
-<!-- In this file, several options can be configured. Such as network configuration. -->
-<!-- We will enable only local access to your machine. with the following line: -->
 
 ## SERVER CONFIGURATION
 
