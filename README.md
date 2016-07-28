@@ -58,7 +58,7 @@ Windows
 ---
 Run [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
-  - Hostname: The ip assigned to you
+  - Hostname: The IP of your vagrant machine
   - Login user: vagrant
   - login pass: vagrant
 
