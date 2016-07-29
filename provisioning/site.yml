@@ -1,16 +1,5 @@
 ---
 - hosts: summerschool.react
   roles:
-    #- react_page
-
-- hosts: summerschool.users
-  roles:
-    #- drakov
-
-- hosts: summerschool.items
-  roles:
-    #- drakov
-
-- hosts: summerschool.cart
-  roles:
-    #- drakov
+    #- react_page  ## IF you run react
+    #- drakov      ## IF you run a microservice
