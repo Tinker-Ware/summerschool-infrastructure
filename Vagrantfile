@@ -2,20 +2,14 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-
-
-  ### MODIFY HOSTNAME and IP  !!
-  ########
-  standard_machine config, 'summerschool.mymachine', '192.168.33.100'
-  ########
-  ########
+  standard_machine config, 'summerschool.mymachine'
 end
 
-def standard_machine(config, hostname, ip)
+def standard_machine(config, hostname)
   config.vm.define hostname do |config|
 
     config.vm.box = "debian/contrib-jessie64"
-    config.vm.network :private_network, ip: ip
+    config.vm.network :public_network
     config.vm.hostname = hostname
     config.ssh.insert_key = false
     config.vm.synced_folder './provisioning', '/vagrant/provisioning', mount_options: ["fmode=666"]
