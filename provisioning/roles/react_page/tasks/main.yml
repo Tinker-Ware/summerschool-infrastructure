@@ -73,6 +73,7 @@
 #   git:
 #     repo={{ github_repo }}
 #     dest={{ repo_path }}/react-tutorial
+#     version=fix-feature
 
 - name: Install node dependencies
   shell: "npm install"
