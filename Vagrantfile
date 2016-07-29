@@ -14,7 +14,7 @@ def standard_machine(config, hostname, ip)
     config.vm.hostname = hostname
     config.ssh.insert_key = false
     config.vm.synced_folder './provisioning', '/vagrant/provisioning', mount_options: ["fmode=666"]
-    config.vm.synced_folder "opt/", "/opt/summerschool", create: true, mount_options: ["dmode=775","fmode=664"]
+    #config.vm.synced_folder "opt/", "/opt/summerschool", create: true, mount_options: ["dmode=775","fmode=664"]
 
     config.vm.provider "virtualbox" do |vb|
       vb.customize ['modifyvm', :id, '--nictype1', 'virtio']
