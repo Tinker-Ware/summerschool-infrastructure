@@ -17,6 +17,8 @@ ___
 
 - provisioning/site.yml
 
+- provisioning/hosts
+
 CHECK:
 
 - provisioning/host_vars/summerschool.react
