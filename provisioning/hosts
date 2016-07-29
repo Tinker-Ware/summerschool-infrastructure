@@ -1,7 +1,4 @@
-summerschool.react ansible_connection=local
-summerschool.users ansible_connection=local
-summerschool.items ansible_connection=local
-summerschool.cart ansible_connection=local
+#summerschool.react ansible_connection=local
 
 [tinkerware]
 tinkerware.react

@@ -2,22 +2,19 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  standard_machine config, 'summerschool.react', '192.168.33.100'
-  standard_machine config, 'summerschool.users', '192.168.33.101'
-  standard_machine config, 'summerschool.items', '192.168.33.102'
-  standard_machine config, 'summerschool.cart', '192.168.33.103'
+  standard_machine config, 'summerschool.react'
 end
 
-def standard_machine(config, hostname, ip)
+def standard_machine(config, hostname)
   config.vm.define hostname do |config|
 
     ### MACHINE CONFIGURATION
     config.vm.box = "debian/contrib-jessie64"
-    config.vm.network :private_network, ip: ip
+    config.vm.network :public_network
     config.vm.hostname = hostname
     config.ssh.insert_key = false
     config.vm.synced_folder './provisioning', '/vagrant/provisioning', mount_options: ["fmode=666"]
-    config.vm.synced_folder "opt/", "/opt/tinker", create: true
+    #config.vm.synced_folder "opt/", "/opt/tinker", create: true
 
     config.vm.provider "virtualbox" do |vb|
       vb.customize ['modifyvm', :id, '--nictype1', 'virtio']

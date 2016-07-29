@@ -1,16 +1,16 @@
 ---
 - hosts: summerschool.react
   roles:
-    - react_page
+    #- react_page
 
 - hosts: summerschool.users
   roles:
-    - drakov
+    #- drakov
 
 - hosts: summerschool.items
   roles:
-    - drakov
+    #- drakov
 
 - hosts: summerschool.cart
   roles:
-    - drakov
+    #- drakov
